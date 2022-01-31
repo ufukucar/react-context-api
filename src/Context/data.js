@@ -2,7 +2,7 @@ export const Users = [
   {
     id: 1,
     name: 'Ufuk',
-    email: 'ufkucar@gmail.com',
+    email: 'ufuk@mail.com',
     age: 34,
     color: 'darkblue',
     pass: 111,
@@ -10,7 +10,7 @@ export const Users = [
   {
     id: 2,
     name: 'Can',
-    email: 'canacar@gmail.com',
+    email: 'can@mail.com',
     age: 38,
     color: 'green',
     pass: 222,
@@ -18,7 +18,7 @@ export const Users = [
   {
     id: 3,
     name: 'Cumali',
-    email: 'cumalial@gmail.com',
+    email: 'cumali@mail.com',
     age: 41,
     color: 'darkred',
     pass: 333,
