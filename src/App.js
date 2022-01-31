@@ -20,22 +20,16 @@ function App() {
   const [userIdIndex, setUserIdIndex] = useState(null)
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
-  const [loginHata, setLoginHata] = useState('')
   const [AppLoginState, setAppLoginState] = useState(false)
+  const [user, setUser] = useState('')
 
   const randomRenkOlustur = (userId) => {
     // random sayı olustur 0-12 arasinda
-    console.log('user id: ', userId)
     let randomIndex = (Math.random() * 12).toFixed(0)
 
     setColor(colors[randomIndex])
     setUserIdIndex(userId)
-    console.log('userIndex: ', userIdIndex)
   }
-
-  // useEffect(() => {
-  //   if (loginState) navigate('/')
-  // })
 
   return (
     <contextJS.Provider
@@ -48,6 +42,9 @@ function App() {
 
         AppLoginState,
         setAppLoginState,
+
+        user,
+        setUser,
       }}
     >
       <BrowserRouter>

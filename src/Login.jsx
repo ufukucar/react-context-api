@@ -9,6 +9,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [loginState, setLoginState] = useState(false)
+  const [loginHata, setLoginHata] = useState('')
 
   const navigate = useNavigate()
 
@@ -25,10 +26,13 @@ const Login = () => {
 
     if (userIndex < 0) {
       let hata = 'Böyle bir kullanıcı bulunmuyor'
+      setLoginHata(hata)
     } else {
       // kullanıcı vardır, anasayfaya yönlendirelim.
 
       context.setAppLoginState(true)
+
+      context.setUser(context.users[userIndex])
 
       navigate('/')
     }
@@ -89,7 +93,7 @@ const Login = () => {
                   Giriş Yap
                 </button>
 
-                <p className=" text-danger"></p>
+                <p className=" text-danger">{loginHata}</p>
               </div>
               <div
                 id="emailHelp"

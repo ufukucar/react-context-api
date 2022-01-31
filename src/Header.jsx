@@ -1,10 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { contextJS } from './Context/Context'
 
 const Header = () => {
   const context = useContext(contextJS)
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -55,6 +56,16 @@ const Header = () => {
               </li>
             )}
           </ul>
+
+          <div className="ml-auto">
+            <ul className="navbar-nav mr-auto">
+              <li>
+                <Link className="nav-link active" to="/#">
+                  <i className="fa fa-user-o"></i> {context.user.name}
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </>
